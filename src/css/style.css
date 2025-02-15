@@ -1,0 +1,35 @@
+body {
+    font-family: 'Consolas';
+    color: #060606;
+    margin: 0;
+    background-image:url(/src/images/Goldoiled.jpg);
+    background-position: top;
+    
+}
+
+.start-screen {
+    
+    text-align: center;
+    padding: 10px;
+    font-size: 48px;
+    width: 500px;
+    background-color:rgb(243, 202, 156); 
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+
+}
+
+.start-screen:hover {
+    background-color:rgb(157, 106, 47);
+    cursor: pointer;
+}
+
+/* .game {
+
+    background-color: lightpink;
+    width: 100vw;
+    height: 100vh;
+
+} */
