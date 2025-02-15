@@ -8,7 +8,7 @@ body {
 }
 
 .start-screen {
-    
+
     text-align: center;
     padding: 10px;
     font-size: 48px;
@@ -24,6 +24,16 @@ body {
 .start-screen:hover {
     background-color:rgb(157, 106, 47);
     cursor: pointer;
+}
+
+.game-screen {
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.hidden {
+    display: none;
 }
 
 /* .game {
