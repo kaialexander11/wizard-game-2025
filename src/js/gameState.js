@@ -1,5 +1,7 @@
 function initState() {
 
+
+    // Initial Random position of the wizard:
     let startX = Math.floor(Math.random() * 1000);
     let startY = Math.floor(Math.random() * 500);
 
@@ -11,6 +13,7 @@ function initState() {
             height: 100,
             posX: startX,
             posY: startY,
+            speed: 10,
         },
         keys: {}
 
