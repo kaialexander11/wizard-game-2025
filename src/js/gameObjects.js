@@ -56,9 +56,8 @@ function initGameObject() {
             bugElement.style.left = gameScreen.offsetWidth - stats.width + 'px';
             bugElement.style.top = Math.floor(Math.random() * (gameScreen.offsetHeight - stats.height)) + 'px';
 
-
             // return bugElement;
-        }
-        
+
+        }       
     };
 }
