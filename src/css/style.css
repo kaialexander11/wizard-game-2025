@@ -7,6 +7,12 @@ body {
     
 }
 
+.game {
+    background-color: lightpink;
+    width: 100vw;
+    height: 100vh;
+}
+
 .start-screen {
 
     text-align: center;
@@ -43,12 +49,15 @@ body {
     /* z-index: 10; */
 }
 
+.bug {
+    position: absolute;
+    background-image: url("/src/images/bug.png");
+    background-size: cover;
+}
+
 .hidden {
     display: none;
 }
 
-.game {
-    background-color: lightpink;
-    width: 100vw;
-    height: 100vh;
-}
+
+
