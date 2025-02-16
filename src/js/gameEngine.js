@@ -25,7 +25,14 @@ function gameLoop(state, game, timestamp) {
     // Render bugs: // Move bugs!: => 
     document.querySelectorAll('.bug').forEach(bug => {
         let posX = parseInt(bug.style.left);
-        bug.style.left = posX - state.bugStats.speed + 'px';
+
+        if (posX > 0) {
+            bug.style.left = posX - state.bugStats.speed + 'px';
+        } else {
+            bug.remove();
+        }
+
+        
     });
 
     //console.log(timestamp);
