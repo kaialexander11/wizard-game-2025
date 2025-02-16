@@ -32,14 +32,23 @@ body {
     background-color: aqua;
 }
 
+.wizard {
+    position: absolute;
+    background-image: url("/src/images/wizard.png");
+    background-size: cover;
+    /* top: 100px;
+    left: 100px; */
+    /* width: 82px;
+    height: 100px; */
+    /* z-index: 10; */
+}
+
 .hidden {
     display: none;
 }
 
 /* .game {
-
     background-color: lightpink;
     width: 100vw;
     height: 100vh;
-
 } */
