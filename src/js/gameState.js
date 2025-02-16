@@ -8,6 +8,7 @@ function initState() {
     const state =  {
 
         player: 'Neo',
+
         wizard: {
 
             width: 82,
@@ -24,6 +25,7 @@ function initState() {
             height: 50,
             nextSpawnTimestamp: 0,
             maxSpawnInterval: 1500,
+            speed: 8,
 
         },
 
