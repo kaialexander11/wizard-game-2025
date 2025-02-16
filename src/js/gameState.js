@@ -29,6 +29,11 @@ function initState() {
 
         },
 
+        fireball: {
+            width: 20,
+            height: 20,
+        },
+
         keys: {
 
             KeyA: false,
