@@ -18,16 +18,15 @@ function gameLoop(state, game, timestamp) {
 
         game.wizardElement.style.backgroundImage = 'url("/src/images/wizard-fire.png")';
 
-        game.createFireBall(wizard, state.fireball);
-
+        if (timestamp > state.fireball.nextSpawnTimestamp) {
+            game.createFireBall(wizard, state.fireball);
+            state.fireball.nextSpawnTimestamp = timestamp + state.fireball.fireRate;
+        }
     } else {
         game.wizardElement.style.backgroundImage = 'url("/src/images/wizard.png")';
     }
 
     // Detect fireball collision:
-
-
-
 
     // Spawn bugs:
     if (timestamp > state.bugStats.nextSpawnTimestamp) {
