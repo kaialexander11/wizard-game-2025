@@ -14,6 +14,13 @@ function gameLoop(state, game, timestamp) {
 
     modifyWizardPosition(state, game);
 
+    if (state.keys.Space) { 
+        game.wizardElement.style.backgroundImage = 'url("/src/images/wizard-fire.png")';
+    } else {
+        game.wizardElement.style.backgroundImage = 'url("/src/images/wizard.png")';
+    }
+
+
     // Spawn bugs:
     if (timestamp > state.bugStats.nextSpawnTimestamp) {
 
@@ -22,7 +29,7 @@ function gameLoop(state, game, timestamp) {
 
     }
 
-    // Render bugs: // Move bugs!: => 
+    // Render bugs: // =>  Move and remove bugs!: => 
     document.querySelectorAll('.bug').forEach(bug => {
         let posX = parseInt(bug.style.left);
 
