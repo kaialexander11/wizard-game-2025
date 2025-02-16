@@ -9,7 +9,8 @@ function start(state, game) {
 
 function gameLoop(state, game) {
 
-    console.log(state.player);
+    //console.log(state.player);
+    console.log(state.keys);
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game));
 
