@@ -9,6 +9,8 @@ function initState() {
 
         player: 'Neo',
 
+        gameOver: false,
+
         wizard: {
 
             width: 82,
