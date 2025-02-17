@@ -12,6 +12,7 @@ function gameLoop(state, game, timestamp) {
     const { wizard } = state;
     const { wizardElement } = game;
 
+    game.scoreScreen.textContent = `${state.score} pts`;
     
 
     modifyWizardPosition(state, game);
@@ -69,6 +70,7 @@ function gameLoop(state, game, timestamp) {
 
         bugElements.forEach(bug => {
             if (detectCollision(bug, fireball)) {
+                state.score += state.killScore; 
                 bug.remove();
                 fireball.remove();
             }
@@ -91,13 +93,11 @@ function gameLoop(state, game, timestamp) {
     wizardElement.style.top = wizard.posY + 'px';
 
     if (state.gameOver) {
-        alert('Game Over');
+        alert(`Game Over - You had ${state.score} pts.`);
     } else {
+        state.score += state.scoreRate;
         window.requestAnimationFrame(gameLoop.bind(null, state, game));
     }
-
-    
-
 }
 
 function modifyWizardPosition(state, game) {
@@ -134,6 +134,7 @@ function detectCollision(objectA, objectB) {
     let second = objectB.getBoundingClientRect();
 
     let hasCollision = !(first.top > second.bottom 
+
                         || first.bottom < second.top 
                         || first.right < second.left
                         || first.left > second.right);

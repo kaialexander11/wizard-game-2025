@@ -11,6 +11,12 @@ function initState() {
 
         gameOver: false,
 
+        score: 0,
+
+        scoreRate: 1,
+
+        killScore: 1000,
+
         wizard: {
 
             width: 82,
